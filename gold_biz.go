@@ -19,8 +19,8 @@ func (s *GoldService) OnInit() {
 // the biz function
 func (s *GoldService) OnHandle(req *common.GoldRequest, rsp *common.GoldResponse) error {
 	// get data from request
-	a := req.Data["a"].(int)
-	b := req.Data["b"].(int)
+	a := req.Data["a"].(float64)
+	b := req.Data["b"].(float64)
 	
 	sum := a+b
 	rsp.Data = make(map[string]interface{})
